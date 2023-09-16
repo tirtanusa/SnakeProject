@@ -33,14 +33,14 @@ while game_is_on:
         score.add()
         snake.add_snake()
 
-    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        game_is_on = False
-        score.game_over()
+    if snake.head.xcor() > 300 or snake.head.xcor() < -300 or snake.head.ycor() > 300 or snake.head.ycor() < -300:
+        score.reset()
+        snake.reset()
 
     for body in snake.snakes[1:] :
         if snake.head.distance(body) < 10:
-            game_is_on = False
-            score.game_over()
+            score.reset()
+            snake.reset()
      
    
 
